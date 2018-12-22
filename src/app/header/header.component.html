@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <span class='info-text mat-body-1'> <a routerLink="/">Anonymous Notes</a> </span>
+  <ul>
+    <span class="sp"></span>
+    <li *ngIf="!isAuthenticated"><a mat-button routerLink="/login" class='info-text mat-body-1' routerLinkActive='mat-accent'>
+        Login </a></li>
+    <li *ngIf="!isAuthenticated"><a mat-button routerLink="/signup" class='info-text mat-body-1' routerLinkActive='mat-accent'>
+        Sign up </a></li>
+    <li *ngIf="isAuthenticated"><a mat-button routerLink="/create" class='info-text mat-body-1' routerLinkActive='mat-accent'>
+        Create Post </a></li>
+    <li *ngIf="isAuthenticated"><button (click)="onLogOut()" mat-button> Log Out </button></li>
+
+  </ul>
+</mat-toolbar>
